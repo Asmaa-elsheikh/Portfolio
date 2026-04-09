@@ -13,7 +13,7 @@ const ProjectInstallments = () => {
         </a>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 pt-24 pb-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Left Column: Narrative */}
           <motion.div 
@@ -23,7 +23,7 @@ const ProjectInstallments = () => {
           >
             <div className="space-y-4">
               <span className="font-label text-xs text-primary uppercase tracking-[0.3em]">FinTech SaaS</span>
-              <h1 className="font-headline text-5xl md:text-7xl font-extrabold leading-[1.1]">Installments</h1>
+              <h1 className="font-headline text-4xl md:text-7xl font-extrabold leading-[1.1]">Installments</h1>
             </div>
 
             <p className="font-body text-xl text-on-surface-variant leading-relaxed">
@@ -48,7 +48,7 @@ const ProjectInstallments = () => {
 
             <div className="space-y-6 pt-8">
               <h3 className="font-headline text-2xl font-bold italic border-l-4 border-primary pl-4">Financial Intelligence</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <TechItem icon="auto_awesome" title="Sentence Parsing" desc="NLP models translate plain text into complex financial schedules." />
                 <TechItem icon="calculate" title="Math Engine" desc="Automated amortization and interest rate calculations." />
                 <TechItem icon="group" title="CRM Portal" desc="Comprehensive dashboard for tracking customer loan health." />
@@ -113,14 +113,14 @@ const ProjectInstallments = () => {
         </div>
 
         {/* Narrative Context */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-           <div className="glass-panel p-10 rounded-3xl border border-outline-variant/10 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-12 sm:mt-20">
+           <div className="glass-panel p-6 sm:p-10 rounded-3xl border border-outline-variant/10 space-y-6">
               <h3 className="font-headline text-2xl font-bold">The Problem</h3>
               <p className="font-body text-on-surface-variant leading-relaxed text-lg font-light">
                 Managing recurring payments is a major administrative burden for SMEs. Manual scheduling leads to errors, missed payments, and wasted time translating verbal customer agreements into digital records.
               </p>
            </div>
-           <div className="bg-primary/5 p-10 rounded-3xl border border-primary/10 space-y-6">
+           <div className="bg-primary/5 p-6 sm:p-10 rounded-3xl border border-primary/10 space-y-6">
               <h3 className="font-headline text-2xl font-bold text-primary">The Solution</h3>
               <p className="font-body text-on-surface-variant leading-relaxed text-lg font-light">
                 Installments utilizes specialized NLP models to bridge the gap between human language and financial logic. By reducing "Intent-to-Record" time, we've enabled business owners to manage 3x more customers with zero additional overhead.

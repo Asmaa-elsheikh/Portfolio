@@ -5,25 +5,45 @@ import ContactModal from '../components/ContactModal';
 
 const Home = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="relative">
       {/* Sticky Navigation */}
       <nav className="sticky top-0 z-50 glass-panel border-b border-outline-variant/10 px-6 py-4 flex justify-between items-center">
-        <div className="flex gap-8 items-center">
-          <span className="font-headline font-extrabold text-xl tracking-tight">Asmaa Ali</span>
+        <div className="flex gap-4 items-center">
           <div className="hidden md:flex gap-6 font-label text-xs uppercase tracking-widest text-on-surface-variant">
             <a href="#inception" className="hover:text-primary transition-colors">Inception</a>
             <a href="#synthesis" className="hover:text-primary transition-colors">Synthesis</a>
             <a href="#impact" className="hover:text-primary transition-colors">Impact</a>
             <a href="#vision" className="hover:text-primary transition-colors">Vision</a>
           </div>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 glass-panel rounded-full"
+          >
+            <motion.div animate={{ rotate: isMenuOpen ? 45 : 0, y: isMenuOpen ? 6 : 0 }} className="w-5 h-[2px] bg-primary rounded-full" />
+            <motion.div animate={{ opacity: isMenuOpen ? 0 : 1 }} className="w-5 h-[2px] bg-primary rounded-full" />
+            <motion.div animate={{ rotate: isMenuOpen ? -45 : 0, y: isMenuOpen ? -6 : 0 }} className="w-5 h-[2px] bg-primary rounded-full" />
+          </button>
         </div>
-        <div className="flex gap-4 items-center">
-        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <motion.div
+          initial={false}
+          animate={{ height: isMenuOpen ? 'auto' : 0, opacity: isMenuOpen ? 1 : 0 }}
+          className="md:hidden absolute top-full left-0 right-0 glass-panel border-b border-outline-variant/10 overflow-hidden"
+        >
+          <div className="flex flex-col p-6 gap-6 font-label text-sm uppercase tracking-widest text-on-surface-variant">
+            <a href="#inception" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">Inception</a>
+            <a href="#synthesis" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">Synthesis</a>
+            <a href="#impact" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">Impact</a>
+            <a href="#vision" onClick={() => setIsMenuOpen(false)} className="hover:text-primary transition-colors">Vision</a>
+          </div>
+        </motion.div>
       </nav>
 
-      <main className="px-6 md:px-24">
+      <main className="px-4 sm:px-12 md:px-24">
         {/* Side Progress Spine (Decorative) */}
         <div className="fixed left-6 md:left-12 top-0 bottom-0 w-[1px] journey-spine opacity-20 hidden md:block" />
 
@@ -41,7 +61,7 @@ const Home = () => {
               Analytics × AI
             </div>
 
-            <h1 className="font-headline text-6xl md:text-8xl font-extrabold tracking-tight leading-[1.1]">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight leading-[1.1]">
               Asmaa Ali
             </h1>
 
@@ -73,7 +93,7 @@ const Home = () => {
               </button>
             </div>
 
-            <p className="font-headline text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dim">
+            <p className="font-headline text-2xl sm:text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dim">
               Building systems that turn data into decisions
             </p>
 
@@ -159,7 +179,7 @@ const Home = () => {
 
         {/* Contact Section */}
         <section className="py-24 text-center">
-          <h2 className="font-headline text-4xl md:text-6xl font-extrabold mb-8 italic">Ready to scale your intelligence?</h2>
+          <h2 className="font-headline text-2xl sm:text-4xl md:text-6xl font-extrabold mb-8 italic">Ready to scale your intelligence?</h2>
           <button 
             onClick={() => setIsContactModalOpen(true)}
             className="px-12 py-4 rounded-full bg-gradient-to-br from-primary-dim to-primary text-white font-label text-lg uppercase tracking-widest font-bold shadow-2xl shadow-primary-dim/40 hover:scale-105 transition-transform"
@@ -180,7 +200,7 @@ const Home = () => {
 const SectionHeader = ({ title, subtitle, noMargin }) => (
   <div className={noMargin ? "" : "mb-10"}>
     <span className="font-label text-xs uppercase tracking-[0.3em] text-primary-dim mb-4 block">{title}</span>
-    <h2 className="font-headline text-5xl font-extrabold text-on-background">{subtitle}</h2>
+    <h2 className="font-headline text-3xl md:text-5xl font-extrabold text-on-background">{subtitle}</h2>
   </div>
 );
 
@@ -189,7 +209,7 @@ const ProjectCard = ({ title, category, description, kpis, tags }) => (
     <div className="absolute left-0 top-0 w-[2px] h-full bg-gradient-to-b from-primary-dim to-transparent opacity-30"></div>
     <div className="absolute left-[-5px] top-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_15px_#ff8ba1]"></div>
 
-    <div className="glass-panel p-8 rounded-xl border border-outline-variant/10 group-hover:border-primary/30 transition-all">
+    <div className="glass-panel p-6 sm:p-8 rounded-xl border border-outline-variant/10 group-hover:border-primary/30 transition-all">
       <div className="flex justify-between items-start mb-6">
         <div>
           <h3 className="font-headline text-2xl font-bold text-on-background">{title}</h3>

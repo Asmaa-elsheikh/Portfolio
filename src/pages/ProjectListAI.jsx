@@ -29,10 +29,10 @@ const ProjectListAI = () => {
         </Link>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="space-y-4 mb-12 text-center">
           <span className="font-label text-xs text-primary uppercase tracking-[0.4em]">Advanced Workflows</span>
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold">AI & Low-Code Projects</h1>
+          <h1 className="font-headline text-4xl md:text-7xl font-extrabold">AI & Low-Code Projects</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

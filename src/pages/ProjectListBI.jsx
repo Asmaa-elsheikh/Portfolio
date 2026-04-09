@@ -30,10 +30,10 @@ const ProjectListBI = () => {
         </Link>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="space-y-4 mb-12 text-center">
           <span className="font-label text-xs text-primary-dim uppercase tracking-[0.4em]">Data Narrative</span>
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold">Power BI Projects</h1>
+          <h1 className="font-headline text-4xl md:text-7xl font-extrabold">Power BI Projects</h1>
         </div>
 
         <div className="flex flex-col gap-12">
@@ -43,7 +43,7 @@ const ProjectListBI = () => {
                 <div className="absolute left-0 top-0 w-[2px] h-full bg-gradient-to-b from-primary-dim to-transparent opacity-30"></div>
                 <div className="absolute left-[-5px] top-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_15px_#ff8ba1]"></div>
 
-                <div className="glass-panel p-8 md:p-12 rounded-2xl border border-outline-variant/10 group-hover:border-primary/30 transition-all">
+                <div className="glass-panel p-6 sm:p-12 rounded-2xl border border-outline-variant/10 group-hover:border-primary/30 transition-all">
                   <div className="flex justify-between items-start mb-6">
                     <div>
                       <h3 className="font-headline text-3xl font-bold text-on-background">{project.title}</h3>

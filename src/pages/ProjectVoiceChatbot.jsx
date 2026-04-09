@@ -12,7 +12,7 @@ const ProjectVoiceChatbot = () => {
         </a>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -21,7 +21,7 @@ const ProjectVoiceChatbot = () => {
           >
             <div className="space-y-4">
               <span className="font-label text-xs text-primary uppercase tracking-[0.3em]">AI Suite</span>
-              <h1 className="font-headline text-5xl md:text-7xl font-extrabold leading-[1.1]">Voice AI Chatbot</h1>
+              <h1 className="font-headline text-4xl md:text-7xl font-extrabold leading-[1.1]">Voice AI Chatbot</h1>
             </div>
 
             <p className="font-body text-xl text-on-surface-variant leading-relaxed">
@@ -46,7 +46,7 @@ const ProjectVoiceChatbot = () => {
 
             <div className="space-y-6 pt-8">
               <h3 className="font-headline text-2xl font-bold italic border-l-4 border-primary pl-4">Core Technology</h3>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <TechItem icon="mic" title="Speech Processing" desc="Optimized Whisper models for low-latency STT." />
                 <TechItem icon="record_voice_over" title="Neural TTS" desc="Realistic voice synthesis with emotional tone." />
                 <TechItem icon="psychology" title="Context Memory" desc="Maintaining state across long voice sessions." />

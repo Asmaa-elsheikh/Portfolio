@@ -53,7 +53,7 @@ const ProjectCafeOffers = () => {
         </a>
       </nav>
 
-      <main className="max-w-6xl mx-auto px-6 pt-24 pb-12">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-12">
         <div className="flex flex-col gap-16">
           {/* Hero Section */}
           <motion.div 
@@ -62,7 +62,7 @@ const ProjectCafeOffers = () => {
             className="space-y-6 text-center max-w-3xl mx-auto"
           >
             <span className="font-label text-xs text-primary-dim uppercase tracking-[0.4em]">Business Strategy</span>
-            <h1 className="font-headline text-5xl md:text-7xl font-extrabold leading-tight">Cafe Offers Analytics</h1>
+            <h1 className="font-headline text-4xl md:text-7xl font-extrabold leading-tight">Cafe Offers Analytics</h1>
             <p className="font-body text-xl text-on-surface-variant">
               A comprehensive Power BI suite for optimizing hospitality operations and customer engagement.
             </p>
@@ -98,7 +98,7 @@ const ProjectCafeOffers = () => {
               </div>
             </div>
 
-            <div className="relative aspect-video glass-panel rounded-3xl border border-outline-variant/10 overflow-hidden group">
+            <div className="relative aspect-[4/3] sm:aspect-video glass-panel rounded-3xl border border-outline-variant/10 overflow-hidden group">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeSlide}
@@ -146,14 +146,14 @@ const ProjectCafeOffers = () => {
           </section>
 
           {/* Narrative sections */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-4">
-             <div className="glass-panel p-10 rounded-3xl border border-outline-variant/10 space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mt-4">
+             <div className="glass-panel p-6 sm:p-10 rounded-3xl border border-outline-variant/10 space-y-6">
                 <h3 className="font-headline text-2xl font-bold">The Problem</h3>
                 <p className="font-body text-on-surface-variant leading-relaxed">
                   Cafe operations often struggle with promotional blind spots, where offers are distributed without clear tracking of customer segment response. The business lacked a unified view that connected transaction frequency with specific campaign triggers, leading to inefficient marketing spend.
                 </p>
              </div>
-             <div className="bg-primary-dim/10 p-10 rounded-3xl border border-primary-dim/20 space-y-6">
+             <div className="bg-primary-dim/10 p-6 sm:p-10 rounded-3xl border border-primary-dim/20 space-y-6">
                 <h3 className="font-headline text-2xl font-bold text-primary">The Solution</h3>
                 <p className="font-body text-on-surface-variant leading-relaxed">
                   Implemented a multi-page Power BI ecosystem that bridges operational data with customer loyalty metrics. By creating dynamic insights for each business pillar—Operations, Customers, and Offers—the dashboard enables the management to pivot strategies based on real-time ROI and behavioral trends.
