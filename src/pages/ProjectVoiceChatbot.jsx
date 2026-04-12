@@ -30,7 +30,7 @@ const ProjectVoiceChatbot = () => {
 
             <div className="flex flex-wrap gap-4">
               <a 
-                href="https://voiceaichatbot.lovable.app/" 
+                href="https://voice-ai-chatbot.lovable.app/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-8 py-3 rounded-full bg-primary text-white font-label text-xs uppercase tracking-widest font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-all flex items-center gap-2"
